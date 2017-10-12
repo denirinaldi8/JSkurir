@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %} Index Page {% endblock %}
+{% block content %}
+<h2>{{ title }}</h2>
+<!-- Menu -->
+<table border="1" style="width: 400px; border-collapse: collapse">
+    <thead>
+    <tr>
+        <th>Asal</th>
+        <th>Tujuan</th>
+        <th>Harga</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for d in data %}
+    <tr>
+        <td>{{ d.asal }}</td>
+        <td>{{ d.tujuan }}</td>
+        <td>{{ d.harga }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br><br>
+<a href="/insert">Tambah Data</a><br>
+<a href="/">Kembali</a>
+{% endblock %}
